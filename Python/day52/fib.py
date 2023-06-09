@@ -7,7 +7,7 @@
     else:
         return fib(n - 2) + fib(n - 1)
 
-
+# __name__ == '__main__' 代表当前模块是主模块
 if __name__ == '__main__':
     n = int(input("请输入一个数字:"))
     i = 1
@@ -29,10 +29,10 @@ n = int(input("请输入一个数字:"))
 a = 1
 b = 1
 while True:
-    if a == n or b == n:
-        print("最少加%d次" % 0)
+    if a == n:  # 此时n是斐波那契数
+        print("最少加减%d次" % 0)
         break
-    elif a > n:
+    elif a > n:  # 此时n在a和b之间
         if n - b < a - n:
             print("最少加%d次" % (n - b))
         else:

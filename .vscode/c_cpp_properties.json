@@ -6,14 +6,15 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [
-                "_DEBUG",
-                "UNICODE",
+                "_DEBUG", 
+                "UNICODE", 
                 "_UNICODE"
             ],
             "compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
             "cStandard": "c17",
             "cppStandard": "gnu++17",
-            "intelliSenseMode": "windows-gcc-x64"
+            "intelliSenseMode": "windows-gcc-x64",
+            "configurationProvider": "cl.eide"
         }
     ],
     "version": 4
