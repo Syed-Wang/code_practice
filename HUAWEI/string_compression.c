@@ -22,17 +22,13 @@ void str_compression(char* str, char* new_str)
         if (str[i] == ch) {
             count++;
         } else {
-            strcat(new_str, &ch);
-            sprintf(count_str, "%d", count);
-            strcat(new_str, count_str);
-            ch = str[i];
-            count = 1;
+            sprintf(new_str, "%s%c%d", new_str, ch, count);
+			ch = str[i];
+			count = 1;
         }
         i++;
     }
-    strcat(new_str, &ch);
-    sprintf(count_str, "%d", count);
-    strcat(new_str, count_str);
+	sprintf(new_str, "%s%c%d", new_str, ch, count);
 }
 
 int main(int argc, const char* argv[])
@@ -41,11 +37,11 @@ int main(int argc, const char* argv[])
     char new_str[256] = { 0 };
     scanf("%s", str);
     str_compression(str, new_str);
-	if (strlen(new_str) < strlen(str)) {
-		printf("%s\n", new_str);
-	} else {
-		printf("%s\n", str);
-	}
+    if (strlen(new_str) < strlen(str)) {
+        printf("%s\n", new_str);
+    } else {
+        printf("%s\n", str);
+    }
 
     return 0;
 }
